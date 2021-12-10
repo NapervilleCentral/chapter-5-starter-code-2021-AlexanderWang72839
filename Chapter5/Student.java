@@ -1,75 +1,62 @@
-
-public class Student //implements Comparable
-{
-	//private static int population;
-	//public static int population;
+public class Student { //implements Comparable
+   private static int population;
+   //public static int population;
 
    private String firstName, lastName;
    private Address homeAddress;
 
-   //private static Address schoolAddress;
-
-
-
+   private static Address schoolAddress = new Address("440 Aurora Avenue", "Naperville", "Il", 60540);
+   
    /**
    //  Sets up this Student object with the specified initial values.
    */
-   public Student (String first, String last, Address home)
-   {
-	   //static var increase pop for ever student created in that school
-	   //population ++; //System.out.println(population  );
+   public Student (String first, String last, Address home) {
+      //static var increase pop for ever student created in that school
+      population ++;
+      System.out.println(population);
 
       firstName = first;
       lastName = last;
       homeAddress = home;
 
    }
-/**------------------------------------------------
-// returns the population = to the amount of student objects created
-
-   public static int get_pop ()
-   {
-	   return population;
+   
+   /**------------------------------------------------
+   * // returns the population = to the amount of student objects created
+   * ---------------------------------------------------*/
+    public static int get_pop() {
+       return population;
    }
 
 
-	public Address getSchool()
-	{
+   public static Address getSchool() {
 
-		return schoolAddress;
+       return schoolAddress;
 
-	}
-*/
-
-	/**
-      //  implement Comparable by make the compareTo method
+   }
+   
+   /**
+   * implement Comparable by make the compareTo method
    */
+  public int compareTo(Object obj) {
+       int result = 0;
+       Student temp = (Student) obj;
 
-   public int compareTo(Object obj)
-   {
-		int result = 0;
-	   Student temp = (Student) obj;
+       return result;
+  }
 
-	   return result;
-   }
-
-
-
-
-  public String get_name()
-  {
-   	return firstName;
-
-   }
+  public String get_name() {
+     return firstName;
+  }
 
 
 
 
 
-	/*returns the amount of studnet obj created
+    /*returns the amount of studnet obj created
    public static int get_pop()
    {
-	   return population;
+       return population;
 
    }
 */
@@ -77,7 +64,7 @@ public class Student //implements Comparable
 
    /**
    //  Returns this Student object as a string.
-   	@return ________
+    @return ________
    */
    public String toString()
    {

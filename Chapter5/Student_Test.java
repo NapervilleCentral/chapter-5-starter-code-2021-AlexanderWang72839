@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class Student_Test here.
  * 
@@ -18,6 +17,9 @@ public class Student_Test
 	Student Taylor = new Student("Taylor","Swift",home);
 	Student Jill = new Student("Jill","Jones",home);
 	Student Tom = new Student("Tom","Jones",home);
+	
+	System.out.println("We have " + Student.get_pop() + " students");
+	System.out.println("Our school address is " + Student.getSchool());
 
 	System.out.println(Jill.compareTo(Taylor));
 	System.out.println(Jill.compareTo(Tom));

@@ -31,6 +31,7 @@ public class Account implements lockable, atm ,Comparable
       balance = initial;
       password = 54321;
    }
+   
    public Account()
    {
    }
@@ -199,24 +200,4 @@ public class Account implements lockable, atm ,Comparable
 
 
 	}//end of compareTo
-}//end of class
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+} //end of class
