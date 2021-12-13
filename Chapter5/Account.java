@@ -194,7 +194,7 @@ public class Account implements lockable, atm ,Comparable
 	      /**  This is the section to implement interface Comparable
 	      // it compares the acctNumber
 	      */
-	public int compareTo (Object o)
+	public int compareTo (Object a)
 	{
 		return 0;
 
