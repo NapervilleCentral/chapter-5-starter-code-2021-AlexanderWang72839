@@ -4,7 +4,7 @@
 //  Represents a street address.
 //********************************************************************
 
-public class Address
+public class Address implements Comparable
 {
 
    private String streetAddress, city, state;
@@ -24,8 +24,8 @@ public class Address
       zipCode = zip;
    }
 
-   public int compareTo(Object obj)
-   {
+   public int compareTo(Object obj) {
+	   Address address1 = (Address)obj;
 	   return 0;
    }
 

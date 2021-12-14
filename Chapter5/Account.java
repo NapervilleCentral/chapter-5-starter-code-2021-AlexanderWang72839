@@ -196,7 +196,9 @@ public class Account implements lockable, atm ,Comparable
 	      */
 	public int compareTo (Object o) //Object can equal any other Object
 	{
-		return 0;
+		Account other = (Account)o; //cast Object to an Account
+		
+		return this.acctNumber - other.acctNumber;
 
 
 	}//end of compareTo
