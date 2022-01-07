@@ -24,7 +24,7 @@ public class Address implements Comparable
       zipCode = zip;
    }
 
-   public int compareTo(Object obj) {
+   public int compareTo(Object obj) { // object is polymorfic
 	   Address address1 = (Address)obj;
 	   return 0;
    }
