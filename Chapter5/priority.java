@@ -9,6 +9,7 @@ public interface priority {
      * getPriority - returns the priority
      */
     double getPriority ();
+    
     /**
      * sets priority to priority
      */

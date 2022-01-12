@@ -25,10 +25,16 @@ public class task implements priority, Comparable  {
     public int compareTo (Object obj) {
         task t2 = (task)obj;
         
-        if (this.priority > 0)
+        if (this.priority > t2.priority)
             return 1;
-        if (this.priority < 0)
+        if (this.priority < t2.priority)
             return -1;
         return 0;
+    }
+    
+    public String toString () {
+        String output;
+        output = this.priority + "\t" + this.name;
+        return output;
     }
 }
