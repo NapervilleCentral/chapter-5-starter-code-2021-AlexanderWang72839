@@ -11,7 +11,9 @@ public class PizzaJoint {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Register reg = new Register(123);
-        int choice, pass;
+        int price, choice, pass;
+        int pizzas = 0, toppings = 0;
+        double total, paid;
 
         while (true) {
             System.out.println();
@@ -25,7 +27,27 @@ public class PizzaJoint {
             //Start order
             if (choice == 1) {
                 if (!(reg.locked())) {
-                
+                    while (choice == 1) {
+                        System.out.println("how many toppings: ");
+                        toppings += input.nextInt();
+                        pizzas++;
+                        
+                        System.out.println("1) Order another pizza");
+                        System.out.println("2) Checkout");
+                        choice = input.nextInt();
+                    }
+                    total = reg.calculateTotal(pizzas, toppings);
+                    System.out.println("Your total is: $" + total);
+                    System.out.println("Amount paid: ");
+                    paid = input.nextDouble();
+                    System.out.println("Your change is " + (paid - total));
+                    
+                    reg.addTotalSales(total);
+                    reg.addOrder();
+                    reg.addPizza(pizzas);
+                    reg.addToppings(toppings);
+                    pizzas = 0;
+                    toppings = 0;
                 }
                 else
                     System.out.println("Register is locked");

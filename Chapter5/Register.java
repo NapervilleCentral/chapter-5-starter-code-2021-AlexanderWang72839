@@ -7,7 +7,7 @@
  * @version 1/12/22
  */
 public class Register implements lockable {
-    private static int numberOfToppings, pizzasOrdered, numOfOrders, totalSales;
+    private static int numOfToppings, pizzasOrdered, numOfOrders, totalSales;
     private int password;
     private boolean isLocked;
     
@@ -15,14 +15,35 @@ public class Register implements lockable {
     public Register (int pass) {
         password = pass;
         isLocked = true;
-        numberOfToppings = 0;
+        numOfToppings = 0;
         pizzasOrdered = 0;
         numOfOrders = 0;
         totalSales = 0;
     }
     
+    public double calculateTotal(int pizzas, int toppings) {
+        double total = pizzas * 10 + toppings * 0.5;
+        return total;
+    }
+    
+    public void addTotalSales(double sale) {
+        totalSales += sale;
+    }
+    
+    public void addOrder() {
+        numOfOrders++;
+    }
+    
+    public void addPizza(int pizza) {
+        pizzasOrdered += pizza;
+    }
+    
+    public void addToppings (int toppings) {
+        numOfToppings += toppings;
+    }
+    
     public static int getNumOfToppings () {
-        return numberOfToppings;
+        return numOfToppings;
     }
     
     public static int getPizzasOrdered () {
