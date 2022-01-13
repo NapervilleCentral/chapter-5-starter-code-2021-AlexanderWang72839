@@ -1,33 +1,24 @@
-
 /**
- * Write a description of class PizzaJoint here.
+ * a simple cash register for a pizza joint
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Alex Wang Alex R
+ * @version 1/13/22
  */
-public class PizzaJoint
-{
-    // instance variables - replace the example below with your own
-    private int x;
 
-    /**
-     * Constructor for objects of class PizzaJoint
-     */
-    public PizzaJoint()
-    {
-        // initialise instance variables
-        x = 0;
-    }
+import java.util.*;
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+public class PizzaJoint {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int choice = 0;
+
+        while () {
+            System.out.println("1) unlock");
+            System.out.println("2) exit");
+
+            choice = input.nextInt();
+
+        }
+
     }
 }

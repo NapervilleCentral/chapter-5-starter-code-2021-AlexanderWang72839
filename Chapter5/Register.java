@@ -6,29 +6,29 @@
  * @author Alex Wang, Alex R
  * @version 1/12/22
  */
-public class Register
-{
-    // instance variables - replace the example below with your own
-    private int x;
+public class Register implements lockable {
+    private static pizzasOrdered = 0, numOfOrders = 0;
 
-    /**
-     * Constructor for objects of class Register
-     */
-    public Register()
-    {
-        // initialise instance variables
-        x = 0;
+    public register () {
+        private boolean isLocked
+        private String password = "asd";
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void setkey (int pass) {
+        this.password = pass;
+    }
+
+    public void lock ( int locker) {
+        if (locker == this.password)
+            this.isLocked = true;
+    }
+
+    public void unlock(int unlocker) {
+        if (unlocker == this.password)
+            this.isLocked = false;
+    }
+
+    public boolean locked () {
+        return this.isLocked;
     }
 }
