@@ -40,7 +40,7 @@ public class PizzaJoint {
                     System.out.println("Your total is: $" + total);
                     System.out.println("Amount paid: ");
                     paid = input.nextDouble();
-                    System.out.println("Your change is " + (paid - total));
+                    System.out.println("Your change is $" + (paid - total));
                     
                     reg.addTotalSales(total);
                     reg.addOrder();
@@ -51,35 +51,34 @@ public class PizzaJoint {
                 }
                 else
                     System.out.println("Register is locked");
+                choice = 0;
             }
             //Statistics
-            if (choice == 2) {
+            else if (choice == 2) {
                 if (!(reg.locked())) {
                     System.out.println();
                     System.out.println("Total sales: " + Register.getTotalSales());
                     System.out.println("Total number of orders: " + Register.getNumOfOrders());
                     System.out.println("Total number of pizzas: " + Register.getPizzasOrdered());
                     System.out.println("Total number of toppings: " + Register.getNumOfToppings());
-                    System.out.println("Enter any integer to continue");
-                    input.nextLine();
                 }
                 else
                     System.out.println("Register is locked");
             }
             //unlock
-            if (choice == 3) {
+            else if (choice == 3) {
                 System.out.println("Enter your password: ");
                 pass = input.nextInt();
                 reg.unlock(pass);
             }
             //lock
-            if (choice == 4) {
+            else if (choice == 4) {
                 System.out.println("Enter your password: ");
                 pass = input.nextInt();
                 reg.lock(pass);
             }
             //exit
-            if (choice == 5)
+            else if (choice == 5)
                 break;
             else
                 System.out.println("error");

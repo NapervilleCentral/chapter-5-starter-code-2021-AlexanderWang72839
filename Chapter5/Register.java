@@ -7,7 +7,8 @@
  * @version 1/12/22
  */
 public class Register implements lockable {
-    private static int numOfToppings, pizzasOrdered, numOfOrders, totalSales;
+    private static int numOfToppings, pizzasOrdered, numOfOrders;
+    private static double totalSales;
     private int password;
     private boolean isLocked;
     
@@ -54,7 +55,7 @@ public class Register implements lockable {
         return numOfOrders;
     }
     
-    public static int getTotalSales () {
+    public static double getTotalSales () {
         return totalSales;
     }
 
@@ -67,8 +68,7 @@ public class Register implements lockable {
             this.isLocked = true;
             System.out.println("locked");
         }
-        else
-            System.out.println("Error");
+        else System.out.println("Error");
     }
 
     public void unlock(int unlocker) {
@@ -76,8 +76,7 @@ public class Register implements lockable {
             this.isLocked = false;
             System.out.println("unlocked");
         }
-        else
-        System.out.println("Error");
+        else System.out.println("Error");
     }
 
     public boolean locked () {
