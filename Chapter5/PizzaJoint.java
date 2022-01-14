@@ -28,7 +28,7 @@ public class PizzaJoint {
             if (choice == 1) {
                 if (!(reg.locked())) {
                     while (choice == 1) {
-                        System.out.println("how many toppings: ");
+                        System.out.println("How many toppings: ");
                         toppings += input.nextInt();
                         pizzas++;
                         
@@ -57,10 +57,10 @@ public class PizzaJoint {
             else if (choice == 2) {
                 if (!(reg.locked())) {
                     System.out.println();
-                    System.out.println("Total sales: " + Register.getTotalSales());
-                    System.out.println("Total number of orders: " + Register.getNumOfOrders());
-                    System.out.println("Total number of pizzas: " + Register.getPizzasOrdered());
-                    System.out.println("Total number of toppings: " + Register.getNumOfToppings());
+                    System.out.println("Total sales: \t\t\t" + Register.getTotalSales());
+                    System.out.println("Total number of orders: \t" + Register.getNumOfOrders());
+                    System.out.println("Total number of pizzas: \t" + Register.getPizzasOrdered());
+                    System.out.println("Total number of toppings: \t" + Register.getNumOfToppings());
                 }
                 else
                     System.out.println("Register is locked");
