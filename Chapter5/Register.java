@@ -1,4 +1,3 @@
-
 /**
  * creates a Register object that can be locked, 
  * manage an order and check total orders
